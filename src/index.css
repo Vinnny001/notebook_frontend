@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 33% 98%;
+  --foreground: 220 16% 15%;
+  --muted: 210 20% 94%;
+  --border: 214 18% 84%;
+  --accent: 169 55% 38%;
+  --primary: 221 63% 33%;
+  --danger: 351 62% 46%;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 222 24% 9%;
+  --foreground: 44 30% 95%;
+  --muted: 219 18% 17%;
+  --border: 217 16% 25%;
+  --accent: 170 48% 44%;
+  --primary: 213 78% 66%;
+  --danger: 356 72% 62%;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.ProseMirror {
+  min-height: calc(100vh - 13rem);
+  outline: none;
+}
+
+.ProseMirror h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid hsl(var(--accent));
+  margin-left: 0;
+  padding-left: 1rem;
+  color: hsl(var(--foreground) / 0.78);
+}
